@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CronToHuman - Translate Cron Expressions to Plain English</title>
+    <title>Cron to Human Translator - Read Cron Expressions Instantly</title>
+    <meta name="description" content="Free online tool to instantly translate and explain cron job expressions into readable plain English. Ideal for developers and sysadmins.">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Free online tool to instantly translate cron job expressions into readable plain English.">
 </head>
 <body>
-    <div class="container">
-        <h1>CronToHuman</h1>
-        <p>Type a cron expression below to see what it means.</p>
-        <input type="text" id="cronInput" placeholder="e.g., */5 * * * *" value="*/5 * * * *">
-        <div class="output-box">
-            <p id="output">Every 5 minutes</p>
+    <main class="main-wrapper">
+        <div class="container">
+            <h1>Cron to Human Translator</h1>
+            <p>Type a cron expression below to see what it means.</p>
+            <input type="text" id="cronInput" placeholder="e.g., */5 * * * *" value="*/5 * * * *">
+            <div class="output-box">
+                <p id="output">Every 5 minutes</p>
+            </div>
         </div>
-    </div>
+
+        <article class="seo-content">
+            <h2>How to Read a Cron Job Schedule</h2>
+            <p>A cron expression is a string representing a schedule for running automated tasks on servers. Standard cron syntax consists of five fields separated by spaces: <strong>Minute, Hour, Day of Month, Month, and Day of Week</strong>. Our cron to human translator parses these fields and converts them into readable text.</p>
+            
+            <h3>Common Cron Expression Examples</h3>
+            <ul class="cron-list">
+                <li><code>0 0 * * *</code> - Runs at midnight every day.</li>
+                <li><code>0 12 * * *</code> - Runs at noon every day.</li>
+                <li><code>0 * * * *</code> - Runs at the start of every hour.</li>
+                <li><code>*/15 * * * *</code> - Runs every 15 minutes.</li>
+                <li><code>0 0 * * 1</code> - Runs at midnight every Monday.</li>
+            </ul>
+
+            <h3>Why Use a Cron Explainer?</h3>
+            <p>Writing server automation scripts is error-prone. A single misplaced asterisk can cause a script to run thousands of times instead of once a day. Developers use a cron expression explainer to verify their syntax before deploying to production environments like Linux servers, AWS EventBridge, or Kubernetes CronJobs.</p>
+        </article>
+    </main>
     <script src="https://unpkg.com/cronstrue@latest/dist/cronstrue.min.js"></script>
     <script src="script.js"></script>
 </body>
