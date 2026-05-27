@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CronToHuman - Translate Cron Expressions to Plain English</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Free online tool to instantly translate cron job expressions into readable plain English.">
+</head>
+<body>
+    <div class="container">
+        <h1>CronToHuman</h1>
+        <p>Type a cron expression below to see what it means.</p>
+        <input type="text" id="cronInput" placeholder="e.g., */5 * * * *" value="*/5 * * * *">
+        <div class="output-box">
+            <p id="output">Every 5 minutes</p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/cronstrue@latest/dist/cronstrue.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
